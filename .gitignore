@@ -1,0 +1,12 @@
+# Flutter/Dart specific
+## Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+.dart_dev/
+.packages
+pubspec.lock
+pubspec.yaml.lock
+
+# Add other entries as needed
