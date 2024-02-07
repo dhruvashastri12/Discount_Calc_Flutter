@@ -39,7 +39,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-            color: mainColor,
+            color: bodyScaffoldColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
             child: Padding(
@@ -48,8 +48,8 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                 children: <Widget>[
                   Theme(
                     data: Theme.of(context).copyWith(
-                        unselectedWidgetColor: Colors.white60,
-                        disabledColor: Colors.white60),
+                        unselectedWidgetColor: textColor,
+                        disabledColor: textColor),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -107,7 +107,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-            color: mainColor,
+            color: bodyScaffoldColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
             child: Padding(
