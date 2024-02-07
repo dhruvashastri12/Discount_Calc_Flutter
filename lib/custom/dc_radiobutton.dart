@@ -1,4 +1,5 @@
 
+import 'package:discount_calc_new/common/colors.dart';
 import 'package:flutter/material.dart';
 
 class DCRadioButton extends StatefulWidget {
@@ -36,7 +37,7 @@ class _DCRadioButtonState extends State<DCRadioButton> {
       // Percentage radio button
       Radio(
         value: 0,
-        activeColor: Colors.white60,
+        activeColor: textColor,
         groupValue: widget.selectedRadio,
         onChanged: widget.onRadioChanged,
       ),
@@ -44,7 +45,7 @@ class _DCRadioButtonState extends State<DCRadioButton> {
         child: Text(
         (widget.label_1)!,
         style: const TextStyle(
-            fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.white60),
+            fontSize: 15.0, fontWeight: FontWeight.w400, color: textColor),
         )
       ),
       // const SizedBox(
@@ -54,7 +55,7 @@ class _DCRadioButtonState extends State<DCRadioButton> {
       // Flat amount radio button
       Radio(
         value: 1,
-        activeColor: Colors.white60,
+        activeColor: textColor,
         groupValue: widget.selectedRadio,
         onChanged: widget.onRadioChanged,
       ),
@@ -62,7 +63,7 @@ class _DCRadioButtonState extends State<DCRadioButton> {
         child: Text(
           (widget.label_2)!,
           style: const TextStyle(
-            fontSize: 15.0, fontWeight: FontWeight.w400, color: Colors.white60),
+            fontSize: 15.0, fontWeight: FontWeight.w400, color: textColor),
         )
       )
     ])

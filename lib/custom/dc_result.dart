@@ -1,3 +1,4 @@
+import 'package:discount_calc_new/common/colors.dart';
 import 'package:flutter/material.dart';
 
 class DCResultField extends StatelessWidget {
@@ -20,14 +21,14 @@ class DCResultField extends StatelessWidget {
       children: <Widget>[
         Text(
           displayLabelTxt ?? '',
-          style: TextStyle(fontSize: labelFontSize, color: Colors.white60),
+          style: TextStyle(fontSize: labelFontSize, color: resultColor, fontWeight: FontWeight.w700),
           textAlign: TextAlign.left,
         ),
         // Expanded(
         Text(
           '${value ?? 0} Rs',
           style: TextStyle(
-              color: Colors.black,
+              color: textColor,
               fontSize: amntFontSize,
               fontWeight: FontWeight.bold),
           textAlign: TextAlign.right,
