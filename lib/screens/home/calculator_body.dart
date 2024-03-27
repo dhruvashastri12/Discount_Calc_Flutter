@@ -35,13 +35,23 @@ class _CalculatorBodyState extends State<CalculatorBody> {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Text(
+          Strings.appName,
+          textAlign: TextAlign.center,
+          style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 20),
+        ),
+        ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-            color: bodyScaffoldColor,
+            color: cardColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
+            elevation: 5,
+            shadowColor: Colors.grey,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -107,11 +117,13 @@ class _CalculatorBodyState extends State<CalculatorBody> {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-            color: bodyScaffoldColor,
+            color: cardColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
+            elevation: 5,
+            shadowColor: Colors.grey,
             child: Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: <Widget>[
                   DCResultField(
