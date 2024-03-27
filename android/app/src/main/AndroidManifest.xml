@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="discount_calc_new"
+        android:label="Discount Calculator"
         android:name="${applicationName}"
         android:icon="@mipmap/disc_calc_app_icon">
         <activity

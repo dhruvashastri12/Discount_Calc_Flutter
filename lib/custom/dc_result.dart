@@ -21,14 +21,14 @@ class DCResultField extends StatelessWidget {
       children: <Widget>[
         Text(
           displayLabelTxt ?? '',
-          style: TextStyle(fontSize: labelFontSize, color: resultColor, fontWeight: FontWeight.w700),
+          style: TextStyle(fontSize: labelFontSize, color: cardResultTitleColor, fontWeight: FontWeight.w700),
           textAlign: TextAlign.left,
         ),
         // Expanded(
         Text(
           '${value ?? 0} Rs',
           style: TextStyle(
-              color: textColor,
+              color: resultColor,
               fontSize: amntFontSize,
               fontWeight: FontWeight.bold),
           textAlign: TextAlign.right,
