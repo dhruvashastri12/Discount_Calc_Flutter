@@ -75,7 +75,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                     controller: itemPriceController,
                     maxLength: 10,
                     onClearPressed: () {
-                      print('ON CLEAR CLICKED item price');
+                      debugPrint('ON CLEAR CLICKED item price');
                       itemPriceController.clear();
                       setState(() {
                         payableAmount = 0.0;
@@ -91,7 +91,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                     controller: itemDiscountController,
                     // maxLength: 2,
                     onClearPressed: () {
-                      print('ON CLEAR CLICKED discount');
+                      debugPrint('ON CLEAR CLICKED discount');
                       itemDiscountController.clear();
                       setState(() {
                         payableAmount = 0.0;
@@ -150,29 +150,31 @@ class _CalculatorBodyState extends State<CalculatorBody> {
 
           setState(() {
             discountValueError = false;
-            payableAmount = (itemPrice - cuttingPrice).roundToDouble();
-            savingAmount = cuttingPrice.roundToDouble();
+            payableAmount = (itemPrice - cuttingPrice);
+            savingAmount = cuttingPrice;
 
-            print(' if 0 isValidDiscountNumber $discountValueError');
-            print('Cutting Price: $cuttingPrice');
-            print('Saving Amount: $savingAmount');
-            print('Percentage Discount: $payableAmount');
+
+            debugPrint(' if 0 isValidDiscountNumber $discountValueError');
+            debugPrint('Cutting Price: $cuttingPrice');
+            debugPrint('Saving Amount: $savingAmount');
+            debugPrint('Percentage Discount: $payableAmount');
           });
         } else {
           setState(() {
             discountValueError = false;
-            payableAmount = (itemPrice - discount).roundToDouble();
-            savingAmount = discount.roundToDouble();
+            payableAmount = (itemPrice - discount);
+            savingAmount = discount;
 
-            print(' if 1 isValidDiscountNumber $discountValueError');
-            print('Flat Discount: $payableAmount');
+
+            debugPrint(' if 1 isValidDiscountNumber $discountValueError');
+            debugPrint('Flat Discount: $payableAmount');
           });
         }
       }else if(discount >= 100){
         setState(() {
           // print('else discount length: $discount.toString().length');
           discountValueError = true;
-          print(' else isValidDiscountNumber $discountValueError');
+          debugPrint(' else isValidDiscountNumber $discountValueError');
         });
       }
  
@@ -184,7 +186,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
     setState(() {
       selectedRadio = val;
       _calculateDiscount();
-      print('Radio seletion changed $val');
+      debugPrint('Radio seletion changed $val');
     });
   }
 }
