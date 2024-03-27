@@ -78,7 +78,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   DCTextField(
                     discountValueError: false,
                     label: Strings.TFLabelItemPrice,
@@ -93,7 +93,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                       });
                     },
                   ),
-                  SizedBox(height: 15.0),
+                  const SizedBox(height: 15.0),
                   DCTextField(
                     // discountValueError: discountValueError ? discountValueError : false,
                     discountValueError: discountValueError,
@@ -131,7 +131,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                       labelFontSize: 22.0,
                       amntFontSize: 26.0,
                       value: savingAmount),
-                  SizedBox(height: 15.0),
+                  const SizedBox(height: 15.0),
                   DCResultField(
                       displayLabelTxt: Strings.resultLabelPayable,
                       labelFontSize: 25.0,
