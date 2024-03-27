@@ -13,7 +13,7 @@ class DCTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('DC_TF discountvalueerror: $discountValueError');
+    debugPrint('DC_TF discountvalueerror: $discountValueError');
     return TextField(
       cursorColor: textColor,
       controller: controller,
