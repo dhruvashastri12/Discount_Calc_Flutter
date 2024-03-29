@@ -8,5 +8,6 @@ build/
 .packages
 pubspec.lock
 pubspec.yaml.lock
+key.properties
 
 # Add other entries as needed
