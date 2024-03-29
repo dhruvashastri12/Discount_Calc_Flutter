@@ -1,4 +1,4 @@
-package com.example.discount_calc_new
+package com.ds12.discount_calc_new
 
 import io.flutter.embedding.android.FlutterActivity
 
