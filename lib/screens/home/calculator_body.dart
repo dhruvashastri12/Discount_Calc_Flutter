@@ -64,7 +64,6 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         DCRadioButton(
-                          // title: 'Best App development framework',
                           label_1: Strings.radioLabelPerecent,
                           label_2: Strings.radioLabelFlat,
                           selectedRadio: selectedRadio,
@@ -99,7 +98,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                     discountValueError: discountValueError,
                     label: Strings.TFLabelDiscount,
                     controller: itemDiscountController,
-                    // maxLength: 2,
+                    maxLength: 10,
                     onClearPressed: () {
                       debugPrint('ON CLEAR CLICKED discount');
                       itemDiscountController.clear();
@@ -156,8 +155,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
         : '0');
 
     if ((isValidNumber(itemPrice))) {
-      if ((isValidDiscountNumber(discount))) {
-        if (selectedRadio == 0) {
+        if (selectedRadio == 0 && discount <100) {
           double cuttingPrice = (itemPrice * discount) / 100;
 
           setState(() {
@@ -171,7 +169,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
             debugPrint('Saving Amount: $savingAmount');
             debugPrint('Percentage Discount: $payableAmount');
           });
-        } else {
+        } else if(selectedRadio == 1 && discount <= itemPrice){
           setState(() {
             discountValueError = false;
             payableAmount = (itemPrice - discount);
@@ -181,8 +179,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
             debugPrint(' if 1 isValidDiscountNumber $discountValueError');
             debugPrint('Flat Discount: $payableAmount');
           });
-        }
-      }else if(discount >= 100){
+        }else {
         setState(() {
           // print('else discount length: $discount.toString().length');
           discountValueError = true;
@@ -193,7 +190,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
       }    
   }
 
-  // // Changes the selected value on 'onChanged' click on each radio button
+  // // Changes the selected value on 'onChanged' click of each radio button
   setSelectedRadio(int val) {
     setState(() {
       selectedRadio = val;

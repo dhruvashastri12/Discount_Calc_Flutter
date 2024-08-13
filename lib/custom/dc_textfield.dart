@@ -1,4 +1,5 @@
 import 'package:discount_calc_new/common/colors.dart';
+import 'package:discount_calc_new/common/strings.dart';
 import 'package:flutter/material.dart';
 
 class DCTextField extends StatelessWidget {
@@ -31,7 +32,7 @@ class DCTextField extends StatelessWidget {
           color: textColor,
           fontSize: 17.0,
         ),
-        errorText: discountValueError!  ? 'Please enter discount value < 100%' : null,
+        errorText: discountValueError!  ? Strings.discountvalueerrorText : null,
         focusedBorder: _getTFBorderDecoration,
         enabledBorder: _getTFBorderDecoration,
         errorBorder: _getTFBorderDecoration,

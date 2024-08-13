@@ -6,4 +6,5 @@ class Strings {
   static const String TFLabelDiscount = "Enter Discount";
   static const String resultLabelSave = "You Save";
   static const String resultLabelPayable = "Payable Amount";
+  static const String discountvalueerrorText = "Please enter discount value < 100% or Item Price";
 }
