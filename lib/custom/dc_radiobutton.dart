@@ -9,11 +9,12 @@ class DCRadioButton extends StatefulWidget {
   
   final void Function(int?)? onRadioChanged;
 
-  DCRadioButton(
-      {@required this.selectedRadio,
+  const DCRadioButton({
+      Key? key,
+      @required this.selectedRadio,
       @required this.label_1,
       @required this.label_2,
-      @required this.onRadioChanged});
+      @required this.onRadioChanged}):super(key: key);
 
   @override
   _DCRadioButtonState createState() => _DCRadioButtonState();

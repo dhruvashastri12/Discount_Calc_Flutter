@@ -7,6 +7,8 @@ import 'package:discount_calc_new/utils/helper.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorBody extends StatefulWidget {
+  const CalculatorBody({super.key});
+
   @override
   _CalculatorBodyState createState() => _CalculatorBodyState();
 }
@@ -50,7 +52,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
             color: cardColor,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(7)),
-            elevation: 5,
+            // elevation: 5,
             shadowColor: Colors.grey,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
