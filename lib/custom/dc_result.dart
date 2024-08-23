@@ -2,17 +2,20 @@ import 'package:discount_calc_new/common/colors.dart';
 import 'package:flutter/material.dart';
 
 class DCResultField extends StatelessWidget {
-  DCResultField({
-    required this.displayLabelTxt,
-    required this.labelFontSize,
-    required this.amntFontSize,
-    required this.value,
-  });
 
   final double value;
   final String displayLabelTxt;
   final double labelFontSize;
   final double amntFontSize;
+
+  const DCResultField({
+    Key? key,
+    required this.displayLabelTxt,
+    required this.labelFontSize,
+    required this.amntFontSize,
+    required this.value,
+  }):super(key: key);
+
 
   @override
   Widget build(BuildContext context) {

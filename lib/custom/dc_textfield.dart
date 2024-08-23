@@ -9,8 +9,8 @@ class DCTextField extends StatelessWidget {
   final int? maxLength;
   final bool? discountValueError;
 
-  DCTextField(
-      {this.controller, this.onClearPressed, this.label, this.maxLength, this.discountValueError});
+  const DCTextField(
+      {Key? key, this.controller, this.onClearPressed, this.label, this.maxLength, this.discountValueError}):super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +18,17 @@ class DCTextField extends StatelessWidget {
     return TextField(
       cursorColor: textColor,
       controller: controller,
-      style: TextStyle(
+      style: const TextStyle(
         color: textColor,
       ),
       maxLength: maxLength,
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
         suffixIcon: IconButton(
-            icon: Icon(Icons.cancel, color: Colors.white24),
+            icon: const Icon(Icons.cancel, color: Colors.white24),
             onPressed: onClearPressed ?? () {}),
         labelText: label ?? '',
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           color: textColor,
           fontSize: 17.0,
         ),
@@ -41,7 +41,7 @@ class DCTextField extends StatelessWidget {
     );
   }
 
-  final _getTFBorderDecoration = OutlineInputBorder(
+  final _getTFBorderDecoration = const OutlineInputBorder(
           borderSide: BorderSide(color: textColor, width: 1.0),
         );
 }
