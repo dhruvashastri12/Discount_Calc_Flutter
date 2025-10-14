@@ -100,7 +100,7 @@ class _CalculatorBodyState extends State<CalculatorBody> {
                     discountValueError: discountValueError,
                     label: Strings.TFLabelDiscount,
                     controller: itemDiscountController,
-                    maxLength: 10,
+                    maxLength: 2,
                     onClearPressed: () {
                       debugPrint('ON CLEAR CLICKED discount');
                       itemDiscountController.clear();
