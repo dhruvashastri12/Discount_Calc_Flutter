@@ -4,7 +4,7 @@ description: "A percentage and flat discount calculator flutter project."
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'
 
-version: 1.0.3+3
+version: 1.0.4+5
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
@@ -14,6 +14,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  url_launcher: 6.2.5
+  in_app_update: ^4.2.2
 
 dev_dependencies:
   flutter_test:

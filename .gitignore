@@ -11,3 +11,5 @@ pubspec.yaml.lock
 key.properties
 
 # Add other entries as needed
+*.zip
+android/gradle/wrapper/gradle-*.zip
